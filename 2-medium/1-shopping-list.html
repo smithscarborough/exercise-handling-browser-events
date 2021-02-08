@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MadLib</title>
+  <title>Shopping List</title>
 </head>
 <body>
   <!-- HTML goes here -->
@@ -20,12 +20,30 @@
     <label for="item">Add New Item</label>
     <br>
     <input type="text" name="item" id="item">
-    <button type="submit">Add</button>
+    <button type="submitButton" type="submit">Add</button>
   </form>
 
   <script>
     // JavaScript goes here
-    
+    let list = document.getElementById("shoppingList");
+    const button = document.getElementById("submitButton");
+    let green = document.getElementById("item");
+
+    function addItem(event) {
+      event.preventDefault()
+      let newItem = document.createElement("li")
+      newItem.innerText = input.value
+      list.appendChild(newItem)
+      input.value = ""
+    }
+
+    button.addEventListener("click", function(event) {
+      event.preventDefault();
+      let newItem = document.createElement("li")
+      newItem.innerText = input.value
+      list.appendChild(newItem)
+      input.value = ""
+    });
   </script>
 </body>
 </html>

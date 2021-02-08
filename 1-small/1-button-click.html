@@ -7,10 +7,13 @@
 </head>
 <body>
   <!-- HTML goes here -->
-
+<button id="btn">Click Me!</button>
   <script>
     // JavaScript goes here
-
+const button = document.getElementById("btn");
+button.addEventListener("click", function() {
+  console.log("Button Pressed");
+});
   </script>
 </body>
 </html>

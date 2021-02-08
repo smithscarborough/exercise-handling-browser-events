@@ -7,10 +7,14 @@
 </head>
 <body>
   <!-- HTML goes here -->
-
+<button id="btn">Whatever you do, don't click this button</button>
   <script>
     // JavaScript goes here
-
+const button = document.querySelector("#btn");
+button.addEventListener("click", function(event){
+  if event.button === 13 {
+    console.log('You pressed enter!');
+  }
   </script>
 </body>
 </html>
